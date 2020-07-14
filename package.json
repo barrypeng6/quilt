@@ -18,13 +18,13 @@
   ],
   "scripts": {
     "_test": "NODE_ICU_DATA=node_modules/full-icu yarn sk test",
-    "build": "yarn sk build",
+    "build": "sk build",
     "check": "lerna run check",
     "ci:lint-docs": "yarn generate docs && test -z \"$(git status --porcelain)\" || echo 'The root README has not been updated. Run `yarn generate docs` in the root of your quilt directory and try again.'",
     "clean": "rimraf './packages/*/build' './packages/*/*.d.ts' './packages/*/*.js' './packages/*/*.esnext' './packages/*/*.mjs' '.sewing-kit'",
     "generate": "plop",
     "generate:package": "plop package && yarn plop docs && prettier --write \"tsconfig.json\"",
-    "lint": "yarn sk lint",
+    "lint": "sk lint",
     "lint:changelogs": "node scripts/lint-changelogs.js",
     "publish": "lerna publish",
     "release": "yarn lint:changelogs && lerna publish",
@@ -32,7 +32,8 @@
     "pretest": "yarn build",
     "test": "yarn _test",
     "test:ci": "yarn _test --coverage",
-    "tophat": "tophat"
+    "tophat": "tophat",
+    "type-check": "sk type-check"
   },
   "resolutions": {
     "@types/react": "16.9.19",
