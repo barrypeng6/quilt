@@ -31,7 +31,7 @@
     "release-beta": "lerna publish --dist-tag beta",
     "pretest": "yarn build",
     "test": "yarn _test",
-    "test:ci": "yarn _test --coverage true",
+    "test:ci": "yarn _test --coverage",
     "tophat": "tophat"
   },
   "resolutions": {
