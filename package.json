@@ -30,8 +30,8 @@
     "release": "yarn lint:changelogs && lerna publish",
     "release-beta": "lerna publish --dist-tag beta",
     "pretest": "yarn build",
-    "test": "yarn _test --no-coverage",
-    "test:ci": "yarn _test --maxWorkers=3 --coverage",
+    "test": "yarn _test --coverage false",
+    "test:ci": "yarn _test --coverage true",
     "tophat": "tophat"
   },
   "resolutions": {
