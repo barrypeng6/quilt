@@ -17,7 +17,7 @@ matrix:
       script:
         - yarn build
         - yarn type-check
-        - yarn test:ci "(react-server|address)"
+        - yarn _test"
     - <<: *node_container
       name: 'Node - unit tests'
       script:
