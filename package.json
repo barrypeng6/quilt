@@ -36,8 +36,7 @@
   },
   "resolutions": {
     "@types/react": "16.9.19",
-    "@types/react-dom": "16.9.5",
-    "jest-environment-jsdom": "^26.1.0"
+    "@types/react-dom": "16.9.5"
   },
   "dependencies": {},
   "devDependencies": {
