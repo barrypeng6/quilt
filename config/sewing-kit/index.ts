@@ -35,6 +35,7 @@ export function quiltPackage({binaryOnly = true, jestEnv = 'jsdom'} = {}) {
             '<rootDir>/packages/web-worker/.*/fixtures',
             '<rootDir>/packages/react-server/.*/fixtures',
           ],
+          coverageDirectory: './coverage/',
         }));
 
         hooks.babelConfig?.hook(_ => ({
