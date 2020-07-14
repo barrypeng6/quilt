@@ -29,6 +29,12 @@ export function quiltPackage({binaryOnly = true, jestEnv = 'jsdom'} = {}) {
             ...config.transform,
             '\\.(gql|graphql)$': 'jest-transform-graphql',
           },
+          watchPathIgnorePatterns: [
+            ...config.watchPathIgnorePatterns,
+            '<rootDir>/node_modules/',
+            '<rootDir>/packages/web-worker/.*/fixtures',
+            '<rootDir>/packages/react-server/.*/fixtures',
+          ],
         }));
 
         hooks.babelConfig?.hook(_ => ({
